@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahmania Aulia R. | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    },
+                    colors: {
+                        darkBg: '#02040a',      /* Hitam pekat malam */
+                        panelBg: '#0b0f19',     /* Latar panel abu gelap */
+                        accentCyan: '#22d3ee',  /* Cyan */
+                        accentPink: '#d946ef',  /* Pink/Fuchsia */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(34, 211, 238, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(34, 211, 238, 0.02) 1px, transparent 1px);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #02040a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22d3ee;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased bg-grid relative overflow-x-hidden">
+
+    <div class="absolute top-[10%] left-[-10%] w-[400px] h-[400px] bg-accentCyan/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-accentPink/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+    <nav class="fixed top-0 left-0 w-full bg-darkBg/60 backdrop-blur-xl z-50 border-b border-slate-900/80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-mono text-sm tracking-wide font-bold text-white flex items-center gap-1">
+                <span class="text-accentCyan">&lt;</span>
+                <span>Rahmania Aulia R.</span>
+                <span class="text-accentPink">/&gt;</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6 text-xs font-semibold text-slate-400">
+                <a href="#" class="text-accentCyan border-b border-accentCyan pb-1 tracking-wider">Home</a>
+                <a href="#about" class="hover:text-white transition-colors tracking-wider">About</a>
+                <a href="#skills" class="hover:text-white transition-colors tracking-wider">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors tracking-wider">Projects</a>
+                <a href="#contact" class="hover:text-white transition-colors tracking-wider">Contact</a>
+            </div>
+
+            <button id="nav-toggle" class="md:hidden text-slate-400 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-darkBg border-b border-slate-900 px-6 py-4 space-y-3 text-xs font-medium uppercase tracking-wider">
+            <a href="#" class="block text-accentCyan">Home</a>
+            <a href="#about" class="block text-slate-400 hover:text-white">About</a>
+            <a href="#skills" class="block text-slate-400 hover:text-white">Skills</a>
+            <a href="#projects" class="block text-slate-400 hover:text-white">Projects</a>
+            <a href="#contact" class="block text-slate-400 hover:text-white">Contact</a>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-28 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative">
+        <div class="space-y-6 max-w-2xl text-left">
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-mono text-slate-500 tracking-widest uppercase">PORTFOLIO 2026</span>
+                <div class="w-12 h-[1px] bg-slate-800"></div>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-none">
+                Hi, I'm <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentCyan via-blue-400 to-accentPink">Rahmania Aulia R.</span>
+            </h1>
+            <p class="text-xs sm:text-sm font-mono text-cyan-400 tracking-wide">
+                Informatics Engineering Student &nbsp;/&nbsp; Database Enthusiast &nbsp;/&nbsp; Web Developer & UI/UX Learner
+            </p>
+            <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed font-light">
+                Passionate Informatics Engineering student with a <span class="text-accentCyan font-medium">strong interest in database systems, web development,</span> and <span class="text-accentPink font-medium">user-centered design.</span>. I enjoy transforming ideas into functional digital solutions while continuously improving my technical and problem-solving skills.
+            </p>
+            <div class="pt-4 flex flex-wrap gap-4 text-xs font-mono">
+                <a href="#projects" class="px-5 py-3 bg-panelBg border border-cyan-500/30 text-accentCyan hover:bg-cyan-950/20 rounded-lg flex items-center gap-2 transition duration-300 group shadow-[0_0_15px_rgba(34,211,238,0.05)]">
+                    <svg class="w-4 h-4 text-accentCyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    View Projects
+                </a>
+                <a href="#contact" class="px-5 py-3 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 rounded-lg flex items-center gap-2 transition duration-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-[340px] flex justify-center">
+            <div class="w-full aspect-square rounded-2xl bg-panelBg/80 border border-slate-800 p-8 flex flex-col justify-center items-center text-center shadow-[0_0_50px_rgba(34,211,238,0.03)] relative group">
+                <div class="absolute -top-1.5 -right-1.5 p-1 bg-darkBg border border-slate-800 rounded-md text-slate-500 text-[10px]">🛡️</div>
+                <div class="absolute top-1/2 -right-2.5 p-1 bg-darkBg border border-slate-800 rounded-md text-accentPink text-[10px]">⚡</div>
+                <div class="absolute -bottom-1.5 -left-1.5 p-1 bg-darkBg border border-slate-800 rounded-md text-slate-500 text-[10px]">⚙️</div>
+
+                <div class="w-16 h-16 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center mb-4 text-accentCyan text-xl font-mono shadow-inner">
+                    &lt; / &gt;
+                </div>
+                <h3 class="text-white font-bold text-lg">Rahmania Aulia R.</h3>
+                <p class="text-xs text-slate-500 font-mono mt-0.5">Informatics Engineering Student</p>
+                <div class="mt-6 flex flex-wrap justify-center gap-1.5 text-[10px] font-mono">
+                   <div class="mt-6 flex flex-wrap justify-center gap-1.5 text-[10px] font-mono">
+    <span class="px-2 py-0.5 bg-slate-950/60 border border-cyan-900/40 rounded text-cyan-400">Database</span>
+    <span class="px-2 py-0.5 bg-slate-950/60 border border-blue-900/40 rounded text-blue-400">Web Dev</span>
+    <span class="px-2 py-0.5 bg-slate-950/60 border border-pink-900/40 rounded text-pink-400">UI/UX</span>
+    <span class="px-2 py-0.5 bg-slate-950/60 border border-purple-900/40 rounded text-purple-400">English</span>
+</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-900/60">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-xs font-mono font-bold tracking-widest text-accentCyan">01 — ABOUT</span>
+                <h2 class="text-4xl font-extrabold text-white tracking-tight">A bit about <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-accentPink">me</span></h2>
+                <div class="space-y-4 text-slate-400 text-sm sm:text-base leading-relaxed font-light pt-2">
+    <p>
+        I am an <span class="text-accentCyan font-medium">Informatics Engineering student</span> at
+        <span class="text-white font-medium">Universitas Muhammadiyah Surakarta</span>
+        with a strong interest in database systems, web development, and UI/UX design.
+    </p>
+
+    <p>
+        As a second-year student, I actively develop my technical and communication skills through academic projects, competitions, English training programs, and organizational activities.
+    </p>
+
+    <p>
+        I enjoy creating applications that are functional, user-friendly, and efficient while continuously learning new technologies and improving my problem-solving abilities.
+    </p>
+</div>
+                  
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-4 w-full">
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-blue-400 font-mono">2</div>
+                        <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mt-1">Semester</div>
+                    </div>
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accentPink to-purple-400 font-mono">5+</div>
+                        <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mt-1">Projects</div>
+                    </div>
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-accentPink font-mono">4+</div>
+                        <div class="text-[10px] uppercase font-mono tracking-wider text-slate-500 mt-1">Certificates</div>
+                    </div>
+                </div>
+
+                <div class="space-y-3 pt-2">
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl flex gap-4 items-start">
+                        <div class="p-2 rounded-lg bg-cyan-950/30 border border-cyan-800/20 text-accentCyan">✨</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Web Development</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">Building responsive and user-friendly web applications while continuously improving front-end and back-end development skills.</p>
+                        </div>
+                    </div>
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl flex gap-4 items-start">
+                        <div class="p-2 rounded-lg bg-blue-950/30 border border-blue-800/20 text-blue-400">🛡️</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Database Systems</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">Applying secure coding practices, stronger validation, and a defensive mindset to build more reliable applications.</p>
+                        </div>
+                    </div>
+                    <div class="bg-panelBg/40 border border-slate-900 p-4 rounded-xl flex gap-4 items-start">
+                        <div class="p-2 rounded-lg bg-pink-950/30 border border-pink-800/20 text-accentPink">🧠</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Communication & Leadership</h4>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">Developing teamwork, public speaking, and critical thinking skills through debates, competitions, and organizational experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-900/60">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+            <span class="text-xs font-mono font-bold tracking-widest text-accentCyan">02 — SKILLS</span>
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Tech <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-accentPink">Stack</span></h2>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">Technologies I use to build full-stack web applications and security tooling.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-panelBg/30 border border-slate-900 p-5 rounded-2xl space-y-4">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-accentCyan text-base">🌐</span> Frontend
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">HTML</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">CSS</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">JavaScript</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Tailwind CSS</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Bootstrap</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Figma</span>
+                </div>
+            </div>
+
+            <div class="bg-panelBg/30 border border-slate-900 p-5 rounded-2xl space-y-4">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-blue-400 text-base">🖥️</span> Backend
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">PHP</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Python</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Basic Laravel</span>
+                </div>
+            </div>
+
+            <div class="bg-panelBg/30 border border-slate-900 p-5 rounded-2xl space-y-4">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-accentPink text-base">🗄️</span> Database
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">MySQL</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">SQL</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Database Design</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">ERD</span>
+                </div>
+            </div>
+
+            <div class="bg-panelBg/30 border border-slate-900 p-5 rounded-2xl space-y-4">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-cyan-400 text-base">🛡️</span> Soft Skills
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Public Speaking</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Teamwork</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Problem Solving</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Critical Thinking</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Debating</span>
+                </div>
+            </div>
+
+            <div class="bg-panelBg/30 border border-slate-900 p-5 rounded-2xl space-y-4">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-purple-400 text-base">🤖</span> AI & Tools
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Python</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400 italic">Git</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">Git Hub</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400 italic">VS code</span>
+                    <span class="px-2.5 py-1 bg-slate-950/60 border border-slate-800/80 rounded text-slate-400">XAMPP</span>
+                   
+                </div>
+            </div>
+
+            <div class="bg-panelBg/30 border border-slate-900/80 p-5 rounded-2xl space-y-4 border-dashed border-slate-800">
+                <div class="flex items-center gap-3 text-white text-sm font-bold">
+                    <span class="text-accentPink text-base">📈</span> Exploring
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                    <span class="px-2.5 py-1 bg-slate-950/40 border border-slate-900 rounded text-slate-500">UI/UX Design</span>
+                    <span class="px-2.5 py-1 bg-slate-950/40 border border-slate-900 rounded text-slate-500">Laravel</span>
+                    <span class="px-2.5 py-1 bg-slate-950/40 border border-slate-900 rounded text-slate-500">Data Analysis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-900/60">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+            <span class="text-xs font-mono font-bold tracking-widest text-accentCyan">03 — PROJECTS</span>
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Featured <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-accentPink">Work</span></h2>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">A selection of projects that demonstrate Web Development, security tooling, and AI integration.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-panelBg/40 border border-slate-900 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group shadow-xl">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-accentCyan to-accentPink"></div>
+                
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-center text-accentCyan text-base">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-tight group-hover:text-accentCyan transition-colors">Playful Quiz Website</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                        An interactive quiz website featuring background music, sound effects, and engaging visual elements to create a fun and enjoyable learning experience.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900 flex gap-2 text-[11px] font-mono text-slate-500">
+                    <span>HTML</span> &middot; <span>CSS</span> &middot; <span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="bg-panelBg/40 border border-slate-900 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group shadow-xl">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-accentCyan to-accentPink"></div>
+                
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-center text-accentCyan text-base">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-tight group-hover:text-accentCyan transition-colors">Library Book Borrowing System</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                        A desktop-based library management application developed to manage book borrowing and return processes efficiently using a MySQL database.
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900 flex gap-2 text-[11px] font-mono text-slate-500">
+                    <span>Python</span> &middot; <span>MySQL</span> &middot; <span>Tkinter</span>
+                </div>
+            </div>
+            
+            <div class="bg-panelBg/40 border border-slate-900 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group shadow-xl">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-accentCyan to-accentPink"></div>
+
+                <div class="space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-center text-accentCyan text-base">
+                        🏨
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white tracking-tight">
+                        Hotel Reservation System
+                    </h3>
+
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                        A database-driven reservation system developed to manage hotel room bookings, customer information, and payment records.
+                    </p>
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-slate-900 flex gap-2 text-[11px] font-mono text-slate-500">
+                    <span>Python</span> &middot;
+                    <span>MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto border-t border-slate-900/60">
+        <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+            <span class="text-xs font-mono font-bold tracking-widest text-accentCyan">06 — CONTACT</span>
+            <h2 class="text-4xl font-extrabold text-white tracking-tight">Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentCyan to-accentPink">Connect</span></h2>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">Open to internships, freelance projects, collaborations, or just a good conversation about tech. Feel free to reach out.</p>
+        </div>
+
+        <form class="space-y-4 font-mono text-xs max-w-2xl mx-auto" onsubmit="event.preventDefault();">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <label class="text-slate-400 tracking-wider uppercase block">Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-panelBg/50 border border-slate-900 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-accentCyan/50 transition">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-slate-400 tracking-wider uppercase block">Email</label>
+                    <input type="email" placeholder="john@example.com" class="w-full bg-panelBg/50 border border-slate-900 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-accentCyan/50 transition">
+                </div>
+            </div>
+            <div class="space-y-2">
+                <label class="text-slate-400 tracking-wider uppercase block">Subject</label>
+                <input type="text" placeholder="Project Collaboration" class="w-full bg-panelBg/50 border border-slate-900 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-accentCyan/50 transition">
+            </div>
+            <div class="space-y-2">
+                <label class="text-slate-400 tracking-wider uppercase block">Message</label>
+                <textarea rows="5" placeholder="Hello, I'd like to talk about..." class="w-full bg-panelBg/50 border border-slate-900 rounded-lg px-4 py-3 text-slate-300 focus:outline-none focus:border-accentCyan/50 transition resize-none"></textarea>
+            </div>
+            <div class="pt-4 text-center">
+                <button type="submit" class="px-6 py-3.5 bg-panelBg/80 border border-cyan-500/30 text-accentCyan hover:bg-cyan-950/20 rounded-lg font-bold tracking-wide transition inline-flex items-center gap-2">
+                    <svg class="w-4 h-4 transform rotate-45 -translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    Send Message
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-10 text-center text-sm text-slate-400 space-y-2">
+            <p>📧 liaatha497@gmail.com</p>
+            <p>💼 linkedin.com/in/rahmaniaauliar</p>
+            <p>📷 @ravenclia</p>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-900/60 max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] font-mono text-slate-600">
+        <p>&copy; 2026 Rahmania Aulia R. All rights reserved.</p>
+        <p>Designed & Developed by Rahmania Aulia R.</p>
+    </footer>
+
+    <a href="#" class="fixed bottom-6 right-6 p-2.5 rounded-lg bg-panelBg border border-slate-800 text-slate-500 hover:text-white transition z-40 text-xs">
+        ▲
+    </a>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('mobile-menu');
+        
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
